@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="CREATE EVENT" icon-name="standard:event">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-edit-form
+                record-id={recordId}
+                object-api-name={objectName}
+                onsuccess={successHandler}>
+                <div class="slds-grid slds-gutters">
+                    <lightning-messages></lightning-messages>
+                    <div class="slds-col">
+                        <lightning-input-field field-name={fields.name}></lightning-input-field>
+                        <lightning-input-field field-name={fields.organizerName}></lightning-input-field>
+                        <lightning-input-field field-name={fields.MaxSeat}></lightning-input-field>
+                        <lightning-input-field field-name={fields.Location}></lightning-input-field>
+                    </div>
+                    <div class="slds-col">
+
+                        <lightning-input-field field-name={fields.StartDate}></lightning-input-field>
+                        <lightning-input-field field-name={fields.EndDate}></lightning-input-field>
+                        <lightning-input-field field-name={fields.Detail}></lightning-input-field>
+                    </div>
+                </div>
+
+                <div class="slds-align_absolute-center">
+                    <lightning-button
+                    label="Cancel"
+                    class="slds-var-m-right_small"
+                    variant="neutral"
+                    type="reset">
+                    </lightning-button>
+
+                    <lightning-button
+                    label="Add Event"
+                    variant="brand"
+                    type="submit">
+                    </lightning-button>
+
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card> 
+</template>

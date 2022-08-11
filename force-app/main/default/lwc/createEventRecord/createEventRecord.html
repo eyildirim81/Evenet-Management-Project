@@ -1,0 +1,60 @@
+<template>
+    <lightning-card title="CREATE RECORD : EVENT" icon-name="standard:contact">
+        <div class="slds-var-m-around_medium">
+            <form class="event">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <lightning-input 
+                        type ="text"
+                        label="Name"
+                        name="Name__c"
+                        onchange={changeHandler}>
+                        </lightning-input>
+                        <lightning-input 
+                        type ="text"
+                        label="Max_Seats__c"
+                        name="LastName"
+                        onchange={changeHandler}>
+                        </lightning-input>
+                        <lightning-input 
+                        type ="text"
+                        label="Event Organizer"
+                        name="Event_Organizer__c"
+                        onchange={changeHandler}>
+                        </lightning-input>
+                    </div>
+                         
+                        <div class="slds-col">
+                            <lightning-input 
+                            type ="datetime"
+                            label="Start Date"
+                            name="Start_Date_Time__c"
+                            onchange={changeHandler}>
+                            </lightning-input>
+                           <lightning-input 
+                           type ="datetime"
+                           label="End Date"
+                           name="End_Date_Time__c"
+                           onchange={changeHandler}>
+                           </lightning-input>
+                           <lightning-input 
+                           type ="text"
+                           label="Event Detail"
+                           name="Event_Detail__c"
+                           onchange={changeHandler}>
+                           </lightning-input>
+
+                        </div>     
+                </div>
+                <div class="slds-align_absolute-center slds-var-m-top_small">
+                    <lightning-button
+                        label="Create Event"
+                        variant="brand"
+                        onclick={createEvent}>
+                    </lightning-button>
+                </div>
+            </form>
+        </div>
+    </lightning-card>
+    
+</template>
